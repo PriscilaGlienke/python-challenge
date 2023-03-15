@@ -4,7 +4,7 @@ import os
 import csv
 
 #defining the path of the file to open
-data_csv = os.path.join("Challenge instructions","PyBank/Resources","budget_data.csv")
+data_csv = os.path.join("PyBank","Resources","budget_data copy.csv")
 
 #defining the veariables
 months = 0
@@ -40,7 +40,7 @@ with open(data_csv) as csvfile:
             greatest_decrease[1] = change_pl
 
 #calculating the average of the above changes using the sum and the len of the list of changes
-average = round(sum(changes)/len(changes),2)
+average = round(sum(changes)/(len(changes) - 1),2)
 
 #printing the results 
 print("Financial Analysis")
@@ -52,7 +52,7 @@ print(f"Greatest Increase in Profits: {greatest_increase[0]} (${greatest_increas
 print(f"Greatest Decrease in Profits: {greatest_decrease[0]} (${greatest_decrease[1]})")
 
 #exporting to a text file
-output_file = os.path.join("python-challenge", "PyBank", "analysis", "PyBank_analysis.txt")
+output_file = os.path.join("PyBank", "analysis", "PyBank_analysis.txt")
 with open(output_file, "w") as datafile:
     writer = csv.writer(datafile)
     writer.writerow(["Financial Analysis"])

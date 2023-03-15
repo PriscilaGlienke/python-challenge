@@ -3,7 +3,7 @@ import os
 import csv
 
 #defining the path
-filepath = os.path.join ("Challenge instructions","PyPoll/Resources","election_data.csv")
+filepath = os.path.join ("PyPoll","Resources","election_data copy.csv")
 
 #defining the variables
 total_votes = 0
@@ -50,7 +50,7 @@ print("-------------------------")
 
 #exporting the results as a text file
 
-output_path = os.path.join("python-challenge", "PyPoll", "analysis", "PyPoll_analysis.txt")
+output_path = os.path.join("PyPoll", "analysis", "PyPoll_analysis.txt")
 with open(output_path, "w") as datafile:
     writer = csv.writer(datafile)
     writer.writerow(["Election Results"])
